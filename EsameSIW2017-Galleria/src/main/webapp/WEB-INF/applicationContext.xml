@@ -16,6 +16,6 @@
 	</context:component-scan>
 	
 	
-	<import resource="security.xml"/>
+	 <import resource="security.xml"/>
 
 </beans>
