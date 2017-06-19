@@ -20,13 +20,13 @@
 					successo!</strong></div>
 			</c:if>
 			<c:if test="${param.success eq false }">
-				<div class="alert alert-danger"><strong>Registrazione non effettuata con
-					</strong>successo!</div>
+				<div class="alert alert-danger"><strong>Nickname gia' utilizzato!
+					</strong></div>
 			</c:if>
 
 			<div class="form-group">
 				<label for="nome" class="col-sm-2 control-label"
-					style="font-size: large;"> Nome: </label>
+					style="font-size: large;"> Nickname: </label>
 				<div class="col-sm-10">
 					<form:input path="nome" cssClass="form-control" />
 					<form:errors path="nome" />
@@ -55,6 +55,7 @@
 
 			<div class="form-group">
 				<div class="col-sm-2">
+				<br><br>
 					<input type="submit" value="Invia Dati" class="btn btn-info" style="font-style: italic;" />
 				</div>
 			</div>
