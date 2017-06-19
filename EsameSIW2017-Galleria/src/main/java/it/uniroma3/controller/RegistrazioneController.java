@@ -1,5 +1,8 @@
 package it.uniroma3.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +37,13 @@ public class RegistrazioneController {
 		if(result.hasErrors())
 			return "user-register";
 		else{
+			List<Utente> utentiReg = new ArrayList<Utente>();
+			utentiReg = utenteService.findAll();
+			for(Utente u : utentiReg){
+				if(u.getNome().equals(user.getNome()))
+					return "redirect:/register?success=false";
+			}
+			//
 			utenteService.save(user);
 			return "redirect:/register?success=true";
 		}
