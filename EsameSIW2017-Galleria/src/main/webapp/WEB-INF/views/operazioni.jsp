@@ -14,7 +14,7 @@
 		<br>
 		<security:authorize access="hasRole('ROLE_ADMIN')">
 		<div align="right">
-			<a href="artista" class="button"> Aggiungi artista </a>
+			<a href="artista" class="button "> Aggiungi artista </a>
 			<p> <img src="http://i65.tinypic.com/mvlrvp.png"></p>
 			</div>
 		</security:authorize>

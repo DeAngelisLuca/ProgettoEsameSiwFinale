@@ -14,12 +14,14 @@
 			action="<spring:url value="/j_spring_security_check" />"
 			method="POST">
 				
-				<div class="field half">
+				
+									<div class="6u 12u$(xsmall)">
 				
 					<input type="text" name="j_username" class="form-control"
 						placeholder="Nickname" required autofocus>
 				</div><br>
-				<div class="field half">
+				
+									<div class="6u 12u$(xsmall)">
 					<input type="password" name="j_password" class="form-control"
 						placeholder="Password" required autofocus>
 				</div>
@@ -30,7 +32,7 @@
 
 
 
-				<div align="center" ><button class="btn btn-lg btn-primary btn-block" type="submit">Entra</button></div>
+				<div align="center" ><button class="button" type="submit">Entra</button></div>
 		</form>
 	</div>
 </body>

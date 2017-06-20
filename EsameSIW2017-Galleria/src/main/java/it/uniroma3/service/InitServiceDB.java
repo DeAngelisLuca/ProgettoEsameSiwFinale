@@ -146,6 +146,17 @@ public class InitServiceDB {
 		botticelli.setDataNascita(new Date(1/03/1445));
 		botticelli.setDataMorte(new Date(17/5/1510));
 		artistaRepository.save(botticelli);
+		
+		Opera opera4 = new Opera();
+		opera4.setArtista(botticelli);
+		opera4.setTitolo("Primavera");
+		opera4.setDataCreazione(1482l);
+		opera4.setDimensione("200x314");
+		opera4.setTecnica("Tempera su tavola");
+		opera4.setLink("http://i68.tinypic.com/vysf1d.jpg");
+		operaRepository.save(opera4);
+		List<Opera> opere4 = operaRepository.findByArtista(botticelli);
+		botticelli.setOpere(opere4);
 	}
 
 }

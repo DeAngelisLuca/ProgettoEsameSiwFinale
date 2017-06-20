@@ -32,7 +32,7 @@
 
 		<div class="inner">
 			<nav id="nav">
-				<a href="index.jsp" class="button alt">GalleriaRoma3</a>
+				<a href="index.jsp" class="button special">GalleriaRoma3</a>
 
 
 				<security:authorize access="hasRole('ROLE_ADMIN')">
@@ -73,17 +73,17 @@
 	<section id="banner">
 		<div class="inner">
 			<header>
-				<h1><marquee behavior='alternate'>Benvenuto nella Galleria di Roma Tre</marquee></h1>
+				<h2>Benvenuto nella Galleria di Roma Tre</h2>
 			</header>
 			
 
 			<div class="flex "></div>
 
 			<footer>
-				<h6>Sogno di dipingere e poi dipingo il mio sogno</h6>
+				<h3><marquee behavior='alternate'>Sogno di dipingere e poi dipingo il mio sogno</marquee></h3>
 				 
 
-<center><div class="w3-center"><h3> Alcune opere presenti nella mostra</div></h3>
+<center><div class="w3-center"><h1> Alcune opere presenti nella mostra</div></h1>
 <br><br>
 
 <div class="w3-content w3-section" style="max-width:50%">
@@ -98,6 +98,7 @@
   <img class="mySlides" src="http://i63.tinypic.com/294gkrc.jpg" style="width:100%">
    <img class="mySlides" src="http://i67.tinypic.com/291iz5v.jpg" style="width:100%">
     <img class="mySlides" src="http://i67.tinypic.com/2d6v143.jpg" style="width:100%">
+    <img class="mySlides" src="http://i68.tinypic.com/vysf1d.jpg" style="width:100%">
   
 </div>
 
@@ -115,7 +116,7 @@ function carousel() {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}    
     x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 1000); 
+    setTimeout(carousel, 3000); 
 }
 </script>
 </center>
@@ -125,25 +126,18 @@ function carousel() {
 			</footer>
 		</div>
 	</section>
-
-
+<center>
 	<h4>Collegamenti esterni della galleria</h4>
-	<ul class="icons">
-		<h4>
-			<li><a href="http://www.twitter.it" target=”_blank” class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-		</h4>
-		<h4>
-			<li><a href="http://www.facebook.it" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-		</h4>
-		<h4>
-			<li><a href="http://instragram.it" class="icon fa-instagram"><span
-					class="label">Instagram</span></a></li>
-		</h4>
-		<h4>
-			<li><a href="http://github.com/DeAngelisLuca/ProgettoEsameSiwFinale/tree/master" class="icon fa-github"><span class="label">Github</span></a></li>
-		</h4>
+									<ul class="icons">
+										<li><a href="http://www.twitter.it" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="http://www.facebook.it" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="http://instragram.it" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="http://github.com/DeAngelisLuca/ProgettoEsameSiwFinale/tree/master" class="icon fa-github"><span class="label">Github</span></a></li>
+									
+									</ul></center>
+	
 
-	</ul>
+	
 
 
 

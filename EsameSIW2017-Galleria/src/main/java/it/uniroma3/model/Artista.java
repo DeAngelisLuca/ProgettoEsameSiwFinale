@@ -20,10 +20,10 @@ public class Artista {
 	@GeneratedValue
 	private Long id;
 	
-	@Size(min=1,message="L'artista deve avere un nome!")
+	@Size(min=1,message="Un artista deve avere un nome!")
 	private String nome;
 	
-	@Size(min=1,message="L'artista deve avere un cognome!")
+	@Size(min=1,message="Un artista deve avere un cognome!")
 	private String cognome;
 	
 	@Size(min=1,message="Campo Obbligatorio")
