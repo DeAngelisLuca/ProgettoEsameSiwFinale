@@ -8,6 +8,7 @@
 </head>
 <body>
 	<div class="container">
+	<br>
 		<h2> Lista degli artisti attualmente presenti nella galleria: </h2>
 		<br><br>
 		
@@ -19,6 +20,8 @@
 	    <br><br>
 		</a>
 	    </c:forEach>
+	    
+	    
 			
 		
 	</div>

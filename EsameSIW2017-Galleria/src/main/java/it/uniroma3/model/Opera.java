@@ -19,7 +19,7 @@ public class Opera {
 	@Size(min=1, message="Campo Obbligatorio!")
 	private String titolo;
 	
-	@Size(min=5,message="Immetti una sorgente dove e' caricata l'immagine dell'opera")
+	
 	private String link;
 	
 	@NumberFormat

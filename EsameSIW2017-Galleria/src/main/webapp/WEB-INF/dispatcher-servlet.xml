@@ -12,6 +12,8 @@
 	<mvc:resources mapping="/resources/**" location="/resources/fonts" />
 	<mvc:resources mapping="/resources/**" location="/resources/js" />	
 	
+	
+	
 	<context:component-scan base-package="it.uniroma3.controller" />
    	<context:component-scan base-package="it.uniroma3.service" />
    	<context:component-scan base-package="it.uniroma3.repository" />

@@ -24,7 +24,7 @@
 
 </head>
 <body>
-<a href="index.jsp" class="button" >GalleriaRoma3</a>
+<a href="<c:url value="/"/>" class="button " >Home</a>
 	
 </body>
 </html>

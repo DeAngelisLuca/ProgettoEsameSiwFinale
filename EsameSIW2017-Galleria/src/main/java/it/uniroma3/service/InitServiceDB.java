@@ -66,16 +66,17 @@ public class InitServiceDB {
 		picasso.setNome("Pablo");
 		picasso.setCognome("Picasso");
 		picasso.setNazionalita("Spagna");
-		picasso.setDataNascita(new Date(25/10/1881));
-		picasso.setDataMorte(new Date(8/04/1973));
+		
+		picasso.setDataNascita(new Date(1881/10/25));
+		picasso.setDataMorte(new Date(4/8/1973));
 		artistaRepository.save(picasso);
 		Opera opera = new Opera();
 		opera.setArtista(picasso);
-		opera.setTitolo("gioconda");
-		opera.setDataCreazione(1503l);
-		opera.setDimensione("77x53");
-		opera.setTecnica("Olio su tavola");
-		opera.setLink("https://www.google.it/search?q=gioconda+quadro&safe=active&biw=1366&bih=662&tbs=isz:ex,iszw:1024,iszh:768&tbm=isch&source=lnt#q=gioconda+quadro&safe=active&tbm=isch&tbas=0&imgdii=bmP__oQwSZNdPM:&imgrc=bxRUJIyvf5vJBM:");
+		opera.setTitolo("Guernica");
+		opera.setDataCreazione(1937l);
+		opera.setDimensione("350x77");
+		opera.setTecnica("Olio su tela");
+		opera.setLink("http://i65.tinypic.com/15e729u.jpg");
 		operaRepository.save(opera);
 		List<Opera> opere = operaRepository.findByArtista(picasso);
 		picasso.setOpere(opere);
@@ -89,6 +90,17 @@ public class InitServiceDB {
 		vincent.setDataMorte(new Date(29/07/1890));
 		artistaRepository.save(vincent);
 		
+		Opera opera1 = new Opera();
+		opera1.setArtista(vincent);
+		opera1.setTitolo("Girasoli");
+		opera1.setDataCreazione(1888l);
+		opera1.setDimensione("95x73");
+		opera1.setTecnica("Olio su tela");
+		opera1.setLink("http://i63.tinypic.com/294gkrc.jpg");
+		operaRepository.save(opera1);
+		List<Opera> opere1 = operaRepository.findByArtista(vincent);
+		vincent.setOpere(opere1);
+		
 		Artista leonardo = new Artista();
 		leonardo.setNome("Leonardo");
 		leonardo.setCognome("Da Vinci");
@@ -97,6 +109,17 @@ public class InitServiceDB {
 		leonardo.setDataMorte(new Date(2/05/1519));
 		artistaRepository.save(leonardo);
 		
+		Opera opera2 = new Opera();
+		opera2.setArtista(leonardo);
+		opera2.setTitolo("Dama con l'ermellino");
+		opera2.setDataCreazione(1490l);
+		opera2.setDimensione("54x39");
+		opera2.setTecnica("Olio su tavola");
+		opera2.setLink("http://i67.tinypic.com/291iz5v.jpg");
+		operaRepository.save(opera2);
+		List<Opera> opere2 = operaRepository.findByArtista(leonardo);
+		leonardo.setOpere(opere2);
+		
 		Artista claude = new Artista();
 		claude.setNome("Claude");
 		claude.setCognome("Monet");
@@ -104,6 +127,17 @@ public class InitServiceDB {
 		claude.setDataNascita(new Date(14/11/1840));
 		claude.setDataMorte(new Date(5/12/1926));
 		artistaRepository.save(claude);
+		
+		Opera opera3 = new Opera();
+		opera3.setArtista(claude);
+		opera3.setTitolo("La passeggiata");
+		opera3.setDataCreazione(1875l);
+		opera3.setDimensione("100x81");
+		opera3.setTecnica("Olio su tela");
+		opera3.setLink("http://i67.tinypic.com/2d6v143.jpg");
+		operaRepository.save(opera3);
+		List<Opera> opere3 = operaRepository.findByArtista(claude);
+		claude.setOpere(opere3);
 		
 		Artista botticelli = new Artista();
 		botticelli.setNome("Sandro");

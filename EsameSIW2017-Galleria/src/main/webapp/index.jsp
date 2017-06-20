@@ -13,12 +13,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="resources/css/main.css" />
-<link href="resources/css/stile.css" rel="stylesheet" type="text/css">
 <meta charset="utf-8" />
+
+<style>
+.mySlides {display:none;}
+</style>
 
 <title>GalleriaRoma3</title>
 </head>
 <body>
+
+
+
+
+
+
 	<header id="header">
 
 		<div class="inner">
@@ -64,20 +73,54 @@
 	<section id="banner">
 		<div class="inner">
 			<header>
-				<h1>Benvenuto nella Galleria di Roma Tre</h1>
+				<h1><marquee behavior='alternate'>Benvenuto nella Galleria di Roma Tre</marquee></h1>
 			</header>
+			
 
 			<div class="flex "></div>
 
 			<footer>
-				da scrivere frase<br> <br> a<br> <br> a<br>
-				<br> a<br> <br> a<br> <br> aa<br> <br>
-				a<br> <br> a<br> <br> a<br> <br> a<br>
-				<br> a<br> <br> a<br> <br> a<br> <br>
-				<br> <br> a<br> <br> a<br> <br> a<br>
-				<br> a<br> <br> aa<br> <br> <br> <br>
-				a<br> <br> <br> <br> a a a a a a
+				<h6>Sogno di dipingere e poi dipingo il mio sogno</h6>
+				 
 
+<center><div class="w3-center"><h3> Alcune opere presenti nella mostra</div></h3>
+<br><br>
+
+<div class="w3-content w3-section" style="max-width:50%">
+
+  <img class="mySlides" src="http://i67.tinypic.com/2wce3ci.jpg" style="width:100%">
+   <img class="mySlides" src="http://i65.tinypic.com/15e729u.jpg" style="width:100%">
+  <img class="mySlides" src="http://i65.tinypic.com/30jrx40.jpg" style="width:100%">
+  <img class="mySlides" src="http://i68.tinypic.com/10oehdf.jpg" style="width:100%">
+  <img class="mySlides" src="http://i66.tinypic.com/2w56id2.jpg" style="width:100%">
+  <img class="mySlides" src="http://i63.tinypic.com/2hy8b2p.jpg" style="width:100%">
+  <img class="mySlides" src="http://i63.tinypic.com/qoey3k.jpg" style="width:100%">
+  <img class="mySlides" src="http://i63.tinypic.com/294gkrc.jpg" style="width:100%">
+   <img class="mySlides" src="http://i67.tinypic.com/291iz5v.jpg" style="width:100%">
+    <img class="mySlides" src="http://i67.tinypic.com/2d6v143.jpg" style="width:100%">
+  
+</div>
+
+<script>
+//Piccolo script per scorrere delle immagini
+var myIndex = 0;
+carousel();
+
+function carousel() { 
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 1000); 
+}
+</script>
+</center>
+
+				
 
 			</footer>
 		</div>

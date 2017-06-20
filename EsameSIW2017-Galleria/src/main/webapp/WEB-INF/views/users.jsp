@@ -6,59 +6,42 @@
 <head>
 <title>Lista Utenti</title>
 
-<script type="text/javascript">
-			$(document).ready(function() {
-				$(".triggerRemove").click(function(e) {
-					e.preventDefault();
-					$("#modalRemove .removeBtn").attr("href", $(this).attr("href"));
-					$("#modalRemove").modal();
-				});
-			});
-</script>
+
 
 </head>
-<body>
+<body><br><br>
 	<div class="container">
-		<h1>View of users:</h1>
+		<center><h3>Utenti registrati</h3></center>
+		
 		<br>
-		<table class="table table-bordered table-hover table-striped">
+		
+		<table class="table-wrapper">
 			<thead>
 				<tr>
 					<th>Username</th>
-					<th>Operations</th>
+					<th>Email</th>
+					<th>Operazione</th>
+					
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach items="${users}" var="user"> <!-- ${users}" var="user" -->
+				<c:forEach items="${users}" var="user"> 
 					<tr>
 						<td>
 							<c:out	value="${user.nome}" />
 						</td>
+						<td><c:out	value="${user.email}" /></td>
 						<td><a href="<spring:url value="/users/remove/${user.id}" />"
-							class="btn btn-danger triggerRemove"> Remove </a></td>
+							class="button special"> Remove </a></td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
+		
 
-		<!-- Modal -->
-		<div class="modal fade" id="modalRemove" tabindex="-1" role="dialog"
-			aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal"
-							aria-hidden="true">&times;</button>
-						<h4 class="modal-title" id="myModalLabel">Remove User</h4>
-					</div>
-					<div class="modal-body">Really remove?</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-						<a href="" class="btn btn-danger removeBtn">Remove</a>
-					</div>
-				</div>
+		
 			</div>
-		</div>
-	</div>
+		
+	
 </body>
 </html>

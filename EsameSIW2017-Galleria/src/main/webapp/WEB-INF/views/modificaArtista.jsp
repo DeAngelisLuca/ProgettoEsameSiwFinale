@@ -40,17 +40,17 @@
 		</div>
 		
 		<div class="form-group">
-			<label for="dataNascita" class="col-sm-2 control-label"> Data Di Nascita: </label>
+			<label for="dataNascita" class="col-sm-2 control-label" > Data Di Nascita: </label>
 			<div class="col-sm-10">
-				<form:input path="dataNascita" cssClass="form-control" />
-				<form:errors path="dataNascita"/>
+				<form:input path="dataNascita" cssClass="form-control" placeholder="dd/mm/yyyy" />
+				<form:errors path="dataNascita" />
 			</div>
 		</div>
 		
 		<div class="form-group">
 			<label for="dataMorte" class="col-sm-2 control-label"> Data Di Morte: </label>
 			<div class="col-sm-10">
-				<form:input path="dataMorte" cssClass="form-control" />
+				<form:input path="dataMorte" cssClass="form-control" placeholder="dd/mm/yyyy" />
 				<form:errors path="dataMorte"/>
 			</div>
 		</div>

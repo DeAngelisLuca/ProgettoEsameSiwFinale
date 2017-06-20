@@ -1,5 +1,8 @@
 package it.uniroma3.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import it.uniroma3.model.Artista;
+import it.uniroma3.model.Utente;
 import it.uniroma3.repository.ArtistaRepository;
 import it.uniroma3.service.ArtistaService;
 
@@ -41,6 +45,15 @@ public class ArtistaController {
 		if(result.hasErrors())
 			return "nuovoArtista";
 		else{
+			List<Artista> artistaReg = new ArrayList<Artista>();
+			artistaReg = artistaService.findAll();
+			for(Artista a : artistaReg){
+				if(a.getNome().equals(artista.getNome())
+						&&(a.getCognome().equals(artista.getCognome()))
+					&&(a.getDataNascita().equals(artista.getDataNascita())))
+					return "redirect:/artista?success=false";
+			}
+			
 			artistaService.save(artista);
 			return "redirect:/artista?success=true";
 		}
@@ -53,6 +66,7 @@ public class ArtistaController {
 		model.addAttribute("artisti", artistaService.findAll());
 		return "artisti";
 	}
+	
 	
 	@RequestMapping("/artisti/{id}")
 	public String getArtista(@PathVariable Long id, Model model){

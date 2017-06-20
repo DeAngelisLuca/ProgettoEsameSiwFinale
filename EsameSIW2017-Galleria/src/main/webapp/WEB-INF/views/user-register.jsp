@@ -4,6 +4,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet"
+	href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet"
+	href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+ <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <title>Registrazione Utente</title>
 
@@ -11,9 +21,10 @@
 <body>
 	<br>
 	<br>
+	
 	<div class="container">
-		<form:form commandName="user"
-			cssClass="form-horizontal registrationForm">
+		<form:form commandName="user"  cssClass="form-horizontal">
+		<div align="center">
 
 			<c:if test="${param.success eq true }">
 				<div class="alert alert-success"><strong>Registrazione effettuata con
@@ -25,9 +36,9 @@
 			</c:if>
 
 			<div class="form-group">
-				<label for="nome" class="col-sm-2 control-label"
+				<label for="nome" class="col-sm-4 control-label"
 					style="font-size: large;"> Nickname: </label>
-				<div class="col-sm-10">
+				<div class="col-sm-5">
 					<form:input path="nome" cssClass="form-control" />
 					<form:errors path="nome" />
 				</div>
@@ -35,9 +46,9 @@
 
 
 			<div class="form-group">
-				<label for="email" class="col-sm-2 control-label" 
+				<label for="email" class="col-sm-4 control-label" 
 					style="font-size: large;"> Email: </label>
-				<div class="col-sm-10">
+				<div class="col-sm-5">
 					<form:input path="email" cssClass="form-control" />
 					<form:errors path="email" />
 				</div>
@@ -45,22 +56,27 @@
 
 
 			<div class="form-group">
-				<label for="password" class="col-sm-2 control-label"
+				<label for="password" class="col-sm-4 control-label"
 					style="font-size: large;"> Password: </label>
-				<div class="col-sm-10">
+				<div class="col-sm-5">
 					<form:password path="password" cssClass="form-control" />
 					<form:errors path="password" />
 				</div>
 			</div>
 
 			<div class="form-group">
-				<div class="col-sm-2">
+			<label for="submit" class="col-sm-5 control-label"
+					style="font-size: large;">  </label>
+				<div class="col-sm-1">
 				<br><br>
-					<input type="submit" value="Invia Dati" class="btn btn-info" style="font-style: italic;" />
+					
+					<input type="submit" value="Invia Dati" class="btn "/>
 				</div>
+			</div>
 			</div>
 		</form:form>
 	</div>
+	
 
 </body>
 </html>

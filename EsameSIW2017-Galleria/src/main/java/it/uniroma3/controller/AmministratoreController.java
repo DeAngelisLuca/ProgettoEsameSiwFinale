@@ -21,7 +21,7 @@ public class AmministratoreController {
 	public String account(Model model, Principal principal) {
 		String nameUser = principal.getName(); // riporta il nome dell'user
 		model.addAttribute("user", utenteService.findOneWithName(nameUser));
-		return "user-account";
+		return "operazioni";
 	}
 	
 	@RequestMapping("/users")
